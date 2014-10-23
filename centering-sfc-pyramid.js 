@@ -1,0 +1,39 @@
+var createSpacer = function(n , numberOfRows){
+	var spacer = "";
+	var i = 0;
+	var diff = numberOfRows - n;
+	while(i < diff){
+	spacer = spacer + "  ";
+	i = i + 1;
+	}
+	return spacer;
+};
+
+var repeatSFC = function(n){
+	var outputValue= "";
+	var i = 0;
+	while(i < n){
+		outputValue = outputValue + "SFC";
+		i = i + 1;
+	}
+	return outputValue;
+};
+
+
+var nSFC = function(n, numberOfRows){
+	var outputValue =
+	createSpacer(n, numberOfRows) +
+	repeatSFC(n);
+	
+console.log(outputValue);
+
+var sfcPyramid = function(numberOfRows){
+	var i = 1;
+		while(i <= numberOfRows){
+		nSFC(i , numnerOfRows);
+		i = i + 1;
+	}
+};
+
+sfcPyramid(5);
+
